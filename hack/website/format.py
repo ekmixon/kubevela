@@ -16,7 +16,7 @@ def convert_link(md):
             if ".md" in url[2] or ".mdx" in url[2]:
                 new_path = url[2].replace(".mdx", "")
                 new_path = new_path.replace(".md", "")
-                new_url = "[{}]({})".format(url[1], new_path)
+                new_url = f"[{url[1]}]({new_path})"
                 data = data.replace(url[0], new_url)
                 print(f"convert {url[0]} to {new_url}")
 
